@@ -1,0 +1,225 @@
+input[type=button]{
+    all: unset;
+}
+nav{
+    margin-bottom: 1rem;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    border-bottom: 4px solid rgb(235, 7, 7);
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    padding: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 7px 0px;
+}
+.navlink, input[type=button] {
+    margin-right: 2rem;
+    color: rgb(255, 255, 255);
+    font-size: 16pt;
+    text-decoration-line: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    background-color: black;
+    padding: 5px;
+    border-radius: 8px;
+}
+.navlink.active {
+    color: rgb(235, 7, 7);
+    font-size: 16pt;
+}
+.navlink:hover {
+    background-color: rgb(48, 44, 44);
+}
+#site-name {
+    font-family: 'Bangers', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: red;
+    margin-top: -40px;
+}
+body {
+    margin-top: 50px;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    background-image: url("mainWorkoutBackground.jpg");
+}
+input, textarea {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 2em;
+    padding: 1em 2em;
+}
+.popup-forms, .logout-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em 0;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 2em;
+    animation: publicRoutinesAnimation 1s;
+}
+.popup-forms{
+    color: white;
+    min-width: 500px;
+    max-width: 75vw;
+    background-color: rgb(78, 77, 77);
+}
+.logout-popup {
+    color: black;
+    width: 350px;
+}
+.routine-body:hover, .logout-popup{
+    background-color: lightgray;
+}
+.detailedRoutines{
+    position: fixed ;
+    background-color:rgb(78, 77, 77);
+    color: white;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 2em;
+    padding: 1rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 7px 0px;
+    transition: all 1s ease-in-out;
+    overflow-y: scroll;
+    height: 50%;
+    width: 40%;
+    animation: publicRoutinesAnimation 1s;
+}
+#app{
+    margin-top: 4rem;
+    display: flex;
+}
+body{
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    background-image: url("mainWorkoutBackground.jpg");
+}
+.login{
+    background-color: rgb(78, 77, 77);
+    padding: 0rem 1em 2em 1em;
+    color:white;
+    letter-spacing: .2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    max-width: 95vw;
+}
+button{
+    font-weight: 30pt;
+    font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+    color: black;
+    border: 1px solid rgb(175, 175, 175);
+    margin: .9rem .5em;
+    border-radius: 2em;
+    background-color: red;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 7px 0px;
+    letter-spacing: .15rem;
+    padding: .75em 1.5em;
+    word-wrap: none;
+}
+button:hover {
+    background-color: rgb(179, 0, 0);
+}
+button:focus {
+    outline: none;
+}
+button:active {
+    box-shadow: inset .5px .5px 2px 0px black;
+}
+.login-form{
+    gap: 50px;
+    letter-spacing: .2rem;
+    font-size: 15pt;
+    color: black;
+    background-color: white;
+    border-radius: 2em;
+    min-width: 300px;
+    padding: 1em 2em;
+    max-width: 85vw;
+    justify-items: center;
+}
+.text-forground{
+    background-color: white;
+    padding: 2rem;
+    letter-spacing: .1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+}
+.public-routines{
+    display: flex;
+    flex-direction: column;
+}
+.routine-body{
+    border-bottom: 1px solid black;
+    padding:20px
+}
+.routine-body:first-of-type{
+    border-top: 1px solid black;
+    margin-top: 25px;
+}
+.routine-body h3{
+    margin-top: 0;
+}
+.activity-body{
+    padding:10px;
+}
+@keyframes publicRoutinesAnimation{
+    from{
+        left: -500px;
+    }
+    to{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.myRoutine:hover{
+    background-color: lightgray;
+}
+.myRoutine{
+    padding: 10px;
+}
+.myDetailedRoutine{
+    position: fixed ;
+    background-color:rgb(78, 77, 77);
+    color: white;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 2em;
+    padding: 1rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 7px 0px;
+    transition: all 1s ease-in-out;
+    animation: publicRoutinesAnimation 1s;
+    overflow-y: scroll;
+    height: 70%;    
+}
+.styleLines{
+    border-top: 1px solid white ;
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+}
+.detailedStyleLines{
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+h1 {
+    color: red;
+    font-family: 'Bangers', 'Bebas Neue', 'Gill Sans', Arial, Helvetica, sans-serif;
+}
+.login-or-register{
+    margin-bottom: 0;
+}
